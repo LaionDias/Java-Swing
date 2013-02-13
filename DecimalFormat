@@ -1,20 +1,23 @@
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
+
 public class decimalFormat {
 
-  public static void main(String[] args) {
-
-		double v1, v2, soma;
+	
+	public static void main(String[] args) {
+		
+		double v1,v2,soma;
 		DecimalFormat df = new DecimalFormat("#.0");
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Valor 1");
 		v1 = sc.nextDouble();
 		System.out.println("Valor 2");
 		v2 = sc.nextDouble();
-		soma = (v1 + v2);
-		System.out.println("Soma:" + soma);
-
+		soma = (v1+v2);
+		soma =(Double.parseDouble(df.format(soma).replace(",", ".")));
+		System.out.println("Soma:"+soma);
+		
 	}
 
 }
